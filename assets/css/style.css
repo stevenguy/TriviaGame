@@ -1,0 +1,21 @@
+.row {
+    height: auto;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    height: 200px;
+    width: 250px;
+}
+
+#questions-load,
+#button {
+    padding: 20px;
+    font-weight: bold;
+    font-size: 40px;
+    
+}
