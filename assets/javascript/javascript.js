@@ -58,6 +58,22 @@ var questions = [
 
 stop()
 
+function scoreTotal (score) {
+
+    for (var i = 0; i < score.length; i++) {
+        
+        var correct = [Q1.answerCorrect, Q2.answerCorrect, Q3.answerCorrect, Q4.answerCorrect]
+
+        if (questions.indexOf(correct) === correct) {
+            wins++
+        } else {
+            losses++
+        }
+
+    }
+
+}
+
 function startGame () {
 
     $('.card').hide();
@@ -65,7 +81,7 @@ function startGame () {
     $('#answer2-button').hide();
     $('#answer3-button').hide();
     $('#answer4-button').hide();
-    $('#game-rules').text("You'll be given a list of questions to answer. You're going to have 10 seconds to answer each question. If answer all questions correctly, you'll be crown the Lord of Useless Info. If you don't, keep carrying on with your life.  If you choose to accept this challenge, click on Q1, Q2, Q3, or Q4 to begin.  This message will self-destruct in 10 seconds.");
+    $('#game-rules').text("You'll be given a list of questions to answer. You're going to have 10 seconds to answer each question. If answer all questions correctly, you'll be crown the Lord of Useless Info. If you don't, keep carrying on with your life.  If you choose to accept this challenge, click on Let's Start button to begin.  This message will self-destruct in 10 seconds.");
     $('#start-button').on('click', function(){
         $('#start-button').hide()
         $('#game-rules').hide()
@@ -77,7 +93,7 @@ function startGame () {
 
 function initialize () {
 
-    wins--;
+    // wins--;
     $('.card').show();
     $('#questions-load').append(Q1.question);
     $('#answer1-button').show();
@@ -88,7 +104,7 @@ function initialize () {
     $('#answer2').append(Q1.answer2);
     $('#answer3').append(Q1.answer3);
     $('#answer4').append(Q1.answer4);
-    wins++;
+    // wins++;
     firstQuestion ()
     stop()
 }
@@ -97,8 +113,9 @@ function firstQuestion () {
 
     // Correct Answer Button
     $('#answer1-button').on('click', function(){
+        // scoreTotal()
         $('#announce').text("You CORRECTLY answered the 1st one!");
-        wins++
+        // wins++
         $('#questions-load').empty();
         $('#answer1').empty();
         $('#answer2').empty();
@@ -117,8 +134,9 @@ function firstQuestion () {
 
     // Incorrect Answer Button
     $('#answer2-button').on('click', function(){
+        // scoreTotal()
         $('#announce').text("1st one is wrong!");
-        losses++
+        // losses++
         $('#questions-load').empty();
         $('#answer1').empty();
         $('#answer2').empty();
@@ -138,8 +156,9 @@ function firstQuestion () {
 
     // Incorrect Answer Button
     $('#answer3-button').on('click', function(){
+        // scoreTotal()
         $('#announce').text("1st one is wrong!");
-        losses++
+        // losses++
         $('#questions-load').empty();
         $('#answer1').empty();
         $('#answer2').empty();
@@ -159,8 +178,9 @@ function firstQuestion () {
 
     // Incorrect Answer Button
     $('#answer4-button').on('click', function(){
+        // scoreTotal()
         $('#announce').text("1st one is wrong!");
-        losses++
+        // losses++
         $('#questions-load').empty();
         $('#answer1').empty();
         $('#answer2').empty();
@@ -184,8 +204,9 @@ function secondQuestion () {
 
     // Correct Answer Button
     $('#answer3-button').on('click', function(){
+        // scoreTotal()
         $('#announce').text("You CORRECTLY answered the 2nd one!");
-        wins++
+        // wins++
         $('#questions-load').empty();
         $('#answer1').empty();
         $('#answer2').empty();
@@ -205,8 +226,9 @@ function secondQuestion () {
 
     // Incorrect Answer Button
     $('#answer1-button').on('click', function(){
+        // scoreTotal()
         $('#announce').text("2nd one is wrong!");
-        losses++
+        // losses++
         $('#questions-load').empty();
         $('#answer1').empty();
         $('#answer2').empty();
@@ -226,8 +248,9 @@ function secondQuestion () {
 
      // Incorrect Answer Button
     $('#answer2-button').on('click', function(){
+        // scoreTotal()
         $('#announce').text("2nd one is wrong!");
-        losses++
+        // losses++
         $('#questions-load').empty();
         $('#answer1').empty();
         $('#answer2').empty();
@@ -247,8 +270,9 @@ function secondQuestion () {
 
      // Incorrect Answer Button
     $('#answer4-button').on('click', function(){
+        // scoreTotal()
         $('#announce').text("2nd one is wrong!");
-        losses++
+        // losses++
         $('#questions-load').empty();
         $('#answer1').empty();
         $('#answer2').empty();
@@ -271,8 +295,9 @@ function thirdQuestion () {
 
     // Correct Answer Button
     $('#answer2-button').on('click', function(){
+        // scoreTotal()
         $('#announce').text("You CORRECTLY answered the 3rd one!");
-        wins++
+        // wins++
         $('#questions-load').empty();
         $('#answer1').empty();
         $('#answer2').empty();
@@ -291,8 +316,9 @@ function thirdQuestion () {
 
     // Incorrect Answer Button
     $('#answer1-button').on('click', function(){
+        // scoreTotal()
         $('#announce').text("3rd one is wrong!");
-        losses++
+        // losses++
         $('#questions-load').empty();
         $('#answer1').empty();
         $('#answer2').empty();
@@ -312,8 +338,9 @@ function thirdQuestion () {
 
      // Incorrect Answer Button
     $('#answer3-button').on('click', function(){
+        // scoreTotal()
         $('#announce').text("3rd one is wrong!");
-        losses++
+        // losses++
         $('#questions-load').empty();
         $('#answer1').empty();
         $('#answer2').empty();
@@ -334,8 +361,9 @@ function thirdQuestion () {
 
      // Incorrect Answer Button
     $('#answer4-button').on('click', function(){
+        // scoreTotal()
         $('#announce').text("3rd one is wrong!");
-        losses++
+        // losses++
         $('#questions-load').empty();
         $('#answer1').empty();
         $('#answer2').empty();
@@ -358,8 +386,9 @@ function thirdQuestion () {
 function fourthQuestion () {
 
     $('#answer2-button').on('click', function(){
+        // scoreTotal()
         $('#announce').text("You CORRECTLY answered the last one!");
-        wins++
+        // wins++
         $('#questions-load').empty();
         $('.card').hide();
         $('#answer1-button').hide();
@@ -377,8 +406,9 @@ function fourthQuestion () {
     });
 
     $('#answer4-button').on('click', function(){
+        // scoreTotal()
         $('#announce').text("4th one is wrong!");
-        losses++
+        // losses++
         $('#questions-load').empty();
         $('.card').hide();
         $('#answer1-button').hide();
@@ -396,8 +426,9 @@ function fourthQuestion () {
     });
 
     $('#answer1-button').on('click', function(){
+        // scoreTotal()
         $('#announce').text("4th one is wrong!");
-        losses++
+        // losses++
         $('#questions-load').empty();
         $('.card').hide();
         $('#answer1-button').hide();
@@ -415,8 +446,9 @@ function fourthQuestion () {
     });
 
     $('#answer3-button').on('click', function(){
+        // scoreTotal()
         $('#announce').text("4th one is wrong!");
-        losses++
+        // losses++
         $('#questions-load').empty();
         $('.card').hide();
         $('#answer1-button').hide();
@@ -536,6 +568,11 @@ function decrement3() {
     $("#time-left").html("<h2>" + time + "</h2>");
     } else {
         alert('Time is Up!')
+        setTimeout(function() {
+        alert("You got " + wins + " questions right and you got " + losses + " wrong.");
+          }, 300);
+        $('#announce').empty();
+        $('#announce').text("You MISSED the last one!");
         $('#questions-load').empty();
         $('#answer1').empty();
         $('#answer2').empty();
@@ -547,6 +584,8 @@ function decrement3() {
         $('#answer3').append(Q4.answer3);
         $('#answer4').append(Q4.answer4);
         time = 0
+        stop()
+        startGame()
     }
 }
 
