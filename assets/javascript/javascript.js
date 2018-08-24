@@ -60,11 +60,11 @@ stop()
 
 function scoreTotal (score) {
 
-    for (var i = 0; i < score.length; i++) {
-        
-        var correct = [Q1.answerCorrect, Q2.answerCorrect, Q3.answerCorrect, Q4.answerCorrect]
+    var correct = [Q1.answerCorrect, Q2.answerCorrect, Q3.answerCorrect, Q4.answerCorrect]
 
-        if (questions.indexOf(correct) === correct) {
+    for (var i = 0; i < correct.length; i++) {
+        
+        if (questions.indexOf(correct) === score) {
             wins++
         } else {
             losses++
