@@ -1,0 +1,147 @@
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        
+        <!-- Added a link to font awesome-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Added a link to Bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <!-- Added a link to local css-->
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    
+    </head>
+    
+    <body> 
+        <div class="bg"></div>
+        <div class="row" style="height: 20px;"></div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="text-left" style="margin: 10px;">
+                    <h5>Player's Correct : <span id="correct"></span></h5>
+                    <h5>Player's Incorrect : <span id="incorrect"></span></h5>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row" style="height: 100px;">
+                    <div class="text-center">
+                        <h1>TIME LEFT : <span id="time-left"></span></h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="text-center">
+                            <!-- PLAY AGAIN Button -->
+                            <button id="play-again-button" class="btn btn-primary btn-lg">PLAY AGAIN</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <h1><span id="announce"></span></h1>
+                </div>
+            </div>
+            <div class="col-md-3">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="text-center">
+                    <h4><span id="game-rules"></span></h4>
+                </div>
+            </div>
+            <br>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="text-center">
+                    <button id="start-button" class="btn btn-primary btn-lg">Let's Start</button><br>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="card text-white bg-dark">
+                    <div id="questions-area"></div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div id="question-area"><span id="questions-load"></span></div><br>
+                        </div>
+                        <div class="row1">
+                            <button id="answer1-button" class="btn btn-primary btn-lg"><span id="answer1"></span></button><br>
+                        </div>
+                        <div class="row2">
+                            <button id="answer2-button" class="btn btn-primary btn-lg"><span id="answer2"></span></button><br>
+                        </div>
+                        <div class="row3">
+                            <button id="answer3-button" class="btn btn-primary btn-lg"><span id="answer3"></span></button><br>
+                        </div>  
+                        <div class="row4">
+                            <button id="answer4-button" class="btn btn-primary btn-lg"><span id="answer4"></span></button><br>
+                        </div>
+                        <div class="row5">
+                            <button id="answer5-button" class="btn btn-primary btn-lg"><span id="answer5"></span></button><br>
+                        </div>
+                        <div class="row6">
+                            <button id="answer6-button" class="btn btn-primary btn-lg"><span id="answer6"></span></button><br>
+                        </div>
+                        <div class="row7">
+                            <button id="answer7-button" class="btn btn-primary btn-lg"><span id="answer7"></span></button><br>
+                        </div>  
+                        <div class="row8">
+                            <button id="answer8-button" class="btn btn-primary btn-lg"><span id="answer8"></span></button><br>
+                        </div>
+                        <div class="row9">
+                            <button id="answer9-button" class="btn btn-primary btn-lg"><span id="answer9"></span></button><br>
+                        </div>
+                        <div class="row10">
+                            <button id="answer10-button" class="btn btn-primary btn-lg"><span id="answer10"></span></button><br>
+                        </div>
+                        <div class="row11">
+                            <button id="answer11-button" class="btn btn-primary btn-lg"><span id="answer11"></span></button><br>
+                        </div>  
+                        <div class="row12">
+                            <button id="answer12-button" class="btn btn-primary btn-lg"><span id="answer12"></span></button><br>
+                        </div>
+                        <div class="row13">
+                            <button id="answer13-button" class="btn btn-primary btn-lg"><span id="answer13"></span></button><br>
+                        </div>
+                        <div class="row14">
+                            <button id="answer14-button" class="btn btn-primary btn-lg"><span id="answer14"></span></button><br>
+                        </div>
+                        <div class="row15">
+                            <button id="answer15-button" class="btn btn-primary btn-lg"><span id="answer15"></span></button><br>
+                        </div>  
+                        <div class="row16">
+                            <button id="answer16-button" class="btn btn-primary btn-lg"><span id="answer16"></span></button><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    
+        <div class="row">
+            <div class="col-md-3"></div>
+            <br>
+            <div class="col-md-6">
+                <div class="text-center">
+                </div>
+            </div>
+            <br>
+            <div class="col-md-3"></div>
+        </div>
+        <div class="row1" style="height: 100px;">
+        </div>
+    
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/javascript/javascript.js"></script>
+    
+    </body>
+    </html>
